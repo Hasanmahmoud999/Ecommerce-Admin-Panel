@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = VITE_API_URL;
+const BASE_URL = import.meta.env.VITE_API_URL;
 //  const TOKEN =  JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser?.accessToken;
 // const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser ? JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken : "";
 const getToken = () => {
