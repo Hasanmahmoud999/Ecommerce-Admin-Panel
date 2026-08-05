@@ -1,0 +1,151 @@
+.product{
+    flex: 5;
+    padding: 20px;
+}
+
+.productTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.producctAddButton{
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.productTop{
+    display: flex;
+}
+
+.productTopLeft{
+    flex: 2;
+}
+
+.productTopRight{
+flex: 1;
+}
+
+.productTopRight{
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
+        box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
+    
+}
+
+.productInfoTop{
+    display: flex;
+    align-items: center;
+}
+
+.productInfoImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.productInfoName{
+    font-weight: 600;
+}
+
+.productInfoBottom{
+    margin-top: 10px;
+}
+
+.productInfoItem{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.productInfoValue {
+    font-weight: 300;
+}
+
+.productInfoKey{
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.productBottom {
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
+    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
+
+}
+
+.productForm{
+    display: flex;
+    justify-content: space-around;
+}
+
+.productFormLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.productFormLeft>label{
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.productFormLeft>input{
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+
+.productFormLeft>select{
+    margin-bottom: 10px;
+}
+
+.productUploadImg{
+
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.productFormRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.productUpload{
+    display: flex;
+    align-items: center;
+}
+
+.productFormRight .productUpload>label{
+    cursor: pointer;
+}
+
+.productButton{
+    border: none;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.productButton:disabled{
+    background-color: rgb(123, 123, 255);
+    cursor: not-allowed;
+}

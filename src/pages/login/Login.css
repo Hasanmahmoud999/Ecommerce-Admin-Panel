@@ -1,0 +1,329 @@
+.login {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("./images/3.png") #0a1f4d;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  position: relative;
+  overflow: hidden;
+  font-family:
+    "Segoe UI",
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+/* ---- Floating blue orbs glowing behind the card ---- */
+.login::before,
+.login::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+.login::before {
+  width: 520px;
+  height: 520px;
+  top: -170px;
+  left: -150px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.75) 0%,
+    rgba(37, 99, 235, 0) 70%
+  );
+  animation: loginOrbA 16s ease-in-out infinite alternate;
+}
+.login::after {
+  width: 480px;
+  height: 480px;
+  bottom: -150px;
+  right: -130px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.55) 0%,
+    rgba(59, 130, 246, 0) 70%
+  );
+  animation: loginOrbB 20s ease-in-out infinite alternate;
+}
+@keyframes loginOrbA {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(70px, 45px) scale(1.15);
+  }
+}
+@keyframes loginOrbB {
+  from {
+    transform: translate(0, 0) scale(1.1);
+  }
+  to {
+    transform: translate(-55px, -35px) scale(0.95);
+  }
+}
+/* ---- Frosted glass card in blue ---- */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 62%;
+  max-width: 460px;
+  min-width: 350px;
+  max-height: 660px;
+  min-height: 560px;
+  border-radius: 20px;
+  background-color: rgba(11, 32, 74, 0.45);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(147, 197, 253, 0.22);
+  box-shadow:
+    0 30px 70px -18px rgba(2, 8, 32, 0.85),
+    inset 0 1px 0 rgba(219, 234, 254, 0.1);
+  padding: 26px 22px;
+  position: relative;
+  z-index: 1;
+  animation: loginCardIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes loginCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* ---- Brand badge ---- */
+.loginBrand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.loginBrandIcon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  border: 1px solid rgba(147, 197, 253, 0.4);
+  box-shadow: 0 10px 26px -8px rgba(37, 99, 235, 0.8);
+}
+.loginBrandTitle {
+  color: #bfdbfe;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.loginForm h1 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 24px rgba(37, 99, 235, 0.55);
+}
+.loginWelcome {
+  color: rgba(191, 219, 254, 0.75);
+  font-size: 14px;
+  margin: -6px 0 0;
+  text-align: center;
+}
+.loginHint {
+  color: rgba(147, 197, 253, 0.55);
+  font-size: 11.5px;
+  text-align: center;
+}
+.loginInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+.loginFormContainer {
+  position: relative;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.loginFormContainerText {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  user-select: none;
+  pointer-events: none;
+  color: rgba(191, 219, 254, 0.7);
+  font-size: 17px;
+  padding: 5px;
+  transition: all 0.25s ease;
+}
+.loginInput {
+  width: 100%;
+  padding: 14px 46px 10px 12px;
+  font-size: 17px;
+  color: #eaf2ff;
+  border: none;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.4);
+  background-color: transparent;
+  outline: none;
+  caret-color: #60a5fa;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.loginInput:focus + .loginFormContainerText,
+.loginInput:valid + .loginFormContainerText {
+  top: 0;
+  left: 6px;
+  color: #7dd3fc;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 0 14px rgba(96, 165, 250, 0.6);
+}
+.loginInput:focus {
+  border-bottom-color: #60a5fa;
+  border-bottom-width: 2px;
+  box-shadow: 0 10px 18px -14px rgba(96, 165, 250, 0.9);
+}
+/* Keep the blue look when the browser autofills the inputs */
+.loginInput:-webkit-autofill,
+.loginInput:-webkit-autofill:hover,
+.loginInput:-webkit-autofill:focus {
+  -webkit-text-fill-color: #eaf2ff;
+  -webkit-box-shadow: 0 0 0 1000px #12295e inset;
+  box-shadow: 0 0 0 1000px #12295e inset;
+  border-bottom: 1px solid rgba(147, 197, 253, 0.4);
+  transition: background-color 9999s ease-in-out 0s;
+}
+.icon {
+  width: 10%;
+  font-size: 26px;
+  color: rgba(147, 197, 253, 0.75);
+  position: absolute;
+  right: 6px;
+  pointer-events: none;
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+.loginFormContainer:focus-within .icon {
+  color: #7dd3fc;
+  transform: scale(1.08);
+}
+.loginButton {
+  width: 90%;
+  padding: 13px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 55%, #60a5fa 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 14px 30px -10px rgba(37, 99, 235, 0.7);
+  transition: all 0.3s ease;
+}
+.loginButton::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.55s ease;
+}
+.loginButton:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #60a5fa 60%, #93c5fd 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px -10px rgba(59, 130, 246, 0.85);
+}
+.loginButton:hover::after {
+  left: 130%;
+}
+.loginButton:disabled {
+  background: rgba(71, 94, 140, 0.4);
+  color: rgba(219, 234, 254, 0.55);
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+.loginButton:disabled::after {
+  display: none;
+}
+.forgetPassword {
+  color: #93c5fd;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.forgetPassword:hover {
+  color: #bfdbfe;
+  text-decoration: underline;
+}
+.rememberme {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(219, 234, 254, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+.rememberme input {
+  margin-right: 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  accent-color: #3b82f6;
+}
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .loginForm {
+    width: 46%;
+  }
+}
+@media (max-width: 768px) {
+  .loginForm {
+    width: 72%;
+    min-width: 0;
+  }
+}
+@media (max-width: 480px) {
+  .loginForm {
+    width: 90%;
+    min-width: 0;
+  }
+}
+@media (max-height: 700px) {
+  .loginForm {
+    height: 94vh;
+    min-height: 0;
+  }
+}
