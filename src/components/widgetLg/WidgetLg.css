@@ -53,3 +53,114 @@
   background-color: #c4d5fa;
   color: #2a7ade;
 }
+
+@media (max-width: 1024px) {
+  .widgetLg {
+    padding: 18px;
+  }
+
+  .widgetLgTitle {
+    font-size: 20px;
+  }
+
+  .widgetImg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .widgetLgTable {
+    border-spacing: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .widgetLg {
+    padding: 16px;
+  }
+
+  .widgetLgTitle {
+    font-size: 18px;
+  }
+
+  .widgetLgTable {
+    border-spacing: 10px;
+  }
+
+  .widgetLgUser {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .widgetImg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .widgetLgButton {
+    padding: 5px 6px;
+    font-size: 13px;
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .widgetLg {
+    padding: 14px;
+  }
+
+  .widgetLgTitle {
+    font-size: 16px;
+  }
+
+  .widgetImg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .widgetLgName {
+    font-size: 14px;
+  }
+
+  .widgetLgDate,
+  .widgetLgAmount {
+    font-size: 13px;
+  }
+
+  .widgetLgButton {
+    font-size: 12px;
+    width: 65px;
+  }
+
+  .widgetLgTable {
+    border-spacing: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  .widgetLg {
+    padding: 12px;
+  }
+
+  .widgetLgTitle {
+    font-size: 15px;
+  }
+
+  .widgetImg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .widgetLgName {
+    font-size: 13px;
+  }
+
+  .widgetLgButton {
+    font-size: 11px;
+    width: 60px;
+  }
+
+  .widgetLgTable {
+    border-spacing: 4px;
+  }
+}

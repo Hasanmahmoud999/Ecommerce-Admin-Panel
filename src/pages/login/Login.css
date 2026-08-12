@@ -303,7 +303,55 @@
   cursor: pointer;
   accent-color: #3b82f6;
 }
+
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.demoTitle {
+  margin: 0;
+  color: rgba(0, 81, 255, 0.861);
+  box-shadow: 0 14px 30px -10px rgba(37, 99, 235, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+.demoInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.demoInfo {
+  margin: 0;
+  /* color: #516c69; */
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  color: rgba(0, 81, 255, 0.861);
+  box-shadow: 0 14px 30px -10px rgba(13, 79, 222, 0.7);
+}
 /* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .demoInfoContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .demoInfo {
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .demoTitle {
+    font-size: 13px;
+  }
+}
 @media (max-width: 1024px) {
   .loginForm {
     width: 46%;

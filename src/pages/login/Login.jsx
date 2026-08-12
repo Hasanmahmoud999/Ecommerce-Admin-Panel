@@ -32,7 +32,10 @@ const Login = () => {
             type="text"
             onChange={(e) => setUserName(e.target.value)}
           />
-          <label className="loginFormContainerText" htmlFor="">
+          <label
+            className="loginFormContainerText"
+            htmlFor=""
+          >
             Username
           </label>
           <Person className="icon" />
@@ -51,7 +54,10 @@ const Login = () => {
           <span className="rememberme">
             <input type="checkbox" /> Remember me
           </span>
-          <Link className="forgetPassword link" to="/">
+          <Link
+            className="forgetPassword link"
+            to="/"
+          >
             Forget Password ?
           </Link>
         </div>
@@ -62,9 +68,19 @@ const Login = () => {
         >
           Login
         </button>
-        <span className="loginHint">
-          Demo build — any username &amp; password will sign you in
-        </span>
+        <div className="demo">
+          <h5 className="demoTitle">Test Information</h5>
+
+          <div className="demoInfoContainer">
+            <p className="demoInfo">User Name :</p>
+            <p className="demoInfo">admin / viewer</p>
+          </div>
+
+          <div className="demoInfoContainer">
+            <p className="demoInfo">Password :</p>
+            <p className="demoInfo">123456</p>
+          </div>
+        </div>
       </form>
     </div>
   );
