@@ -19,12 +19,8 @@ const Topbar = () => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { currentUser, allUsers, isFetching } = useSelector(
-    (state) => state.user,
-  );
-  useEffect(() => {
-    setUser(allUsers?.find((item) => item._id === currentUser._id));
-  }, []);
+  const { currentUser, isFetching } = useSelector((state) => state.user);
+  console.log(currentUser);
   const handleLogout = () => {
     dispatch(logOutStart());
     setTimeout(() => {
@@ -61,8 +57,8 @@ const Topbar = () => {
             </div>
             <img
               src={
-                user
-                  ? user.img
+                currentUser
+                  ? currentUser?.img
                   : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT03NgdF9L0GIRhUQriHTDoJt888Zte9DhNTA&s"
               }
               alt=""
