@@ -23,7 +23,7 @@ const Topbar = () => {
     (state) => state.user,
   );
   useEffect(() => {
-    setUser(allUsers.find((item) => item._id === currentUser._id));
+    setUser(allUsers?.find((item) => item._id === currentUser._id));
   }, []);
   const handleLogout = () => {
     dispatch(logOutStart());
