@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Topbar.css";
 import {
   ExitToAppOutlined,
@@ -7,7 +7,7 @@ import {
   Settings,
 } from "@material-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logOutStart, logOutSuccess } from "../../redux/slices/userSlice";
 
 const Topbar = () => {
@@ -15,11 +15,16 @@ const Topbar = () => {
   //     JSON.parse(localStorage.getItem("persist:root")).user
   // ).currentUser?.isAdmin;
   const [loading, setLoading] = useState(false);
+  const [user, setUser] = useState();
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { isFetching } = useSelector((state) => state.user);
-
+  const { currentUser, allUsers, isFetching } = useSelector(
+    (state) => state.user,
+  );
+  useEffect(() => {
+    setUser(allUsers.find((item) => item._id === currentUser._id));
+  }, []);
   const handleLogout = () => {
     dispatch(logOutStart());
     setTimeout(() => {
@@ -33,7 +38,12 @@ const Topbar = () => {
     <div className="topbar">
       <div className="topbarwrapper">
         <div className="topleft">
-          <span className="logo">Dashboard</span>
+          <Link
+            to={"/"}
+            className="link"
+          >
+            <span className="logo">Dashboard</span>
+          </Link>
         </div>
         <div className="topright">
           {/* {admin && ( */}
@@ -50,7 +60,11 @@ const Topbar = () => {
               <Settings />
             </div>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT03NgdF9L0GIRhUQriHTDoJt888Zte9DhNTA&s"
+              src={
+                user
+                  ? user.img
+                  : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT03NgdF9L0GIRhUQriHTDoJt888Zte9DhNTA&s"
+              }
               alt=""
               className="topAvatar"
             />

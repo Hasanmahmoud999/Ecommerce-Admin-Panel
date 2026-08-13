@@ -1,7 +1,35 @@
-.home{
-    flex: 5;
+.home {
+  flex: 5;
 }
-.homeWidgets{
-    display: flex;
-    margin: 20px;
+.homeWidgets {
+  display: flex;
+  margin: 20px;
+}
+
+@media (max-width: 1024px) {
+  .homeWidgets {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeWidgets {
+    flex-direction: column;
+    margin: 16px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .homeWidgets {
+    margin: 12px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .homeWidgets {
+    margin: 10px;
+    gap: 14px;
+  }
 }

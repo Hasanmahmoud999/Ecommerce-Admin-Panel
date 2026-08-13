@@ -42,7 +42,6 @@ const User = () => {
       setImgFile(e.target.files[0]);
     }
   };
-  console.log(imgFile);
   const handleChange = (e) => {
     setInputs((prev) => {
       return { ...prev, [e.target.name]: e.target.value };

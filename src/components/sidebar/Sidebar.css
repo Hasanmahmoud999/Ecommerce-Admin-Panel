@@ -55,7 +55,8 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 60px; /* عرض مناسب للأيقونات فقط */
+    flex: 0.5;
+    /* width: 60px; عرض مناسب للأيقونات فقط */
   }
 
   .sidebarWrapper {
@@ -92,6 +93,8 @@
 
 @media (max-width: 480px) {
   .sidebar {
+    flex: 0.5;
+
     width: 54px;
   }
 
@@ -106,6 +109,8 @@
 
 @media (max-width: 380px) {
   .sidebar {
+    flex: 0.5;
+
     width: 50px;
   }
 

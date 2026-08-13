@@ -1,151 +1,281 @@
-.product{
-    flex: 5;
-    padding: 20px;
+.product {
+  flex: 5;
+  padding: 20px;
 }
 
-.productTitleContainer{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
+.productTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.producctAddButton{
-    width: 80px;
-    border: none;
-    border-radius: 5px;
-    background-color: teal;
-    color: white;
-    font-size: 16px;
-    padding: 5px;
-    cursor: pointer;
+.producctAddButton {
+  width: 100px;
+  background: linear-gradient(135deg, #00299b 0%, #0049bd 55%, #0067e5 100%);
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
 }
 
-.productTop{
-    display: flex;
+.productTop {
+  display: flex;
 }
 
-.productTopLeft{
-    flex: 2;
+.productTopLeft {
+  flex: 2;
 }
 
-.productTopRight{
-flex: 1;
+.productTopRight {
+  flex: 1;
 }
 
-.productTopRight{
-    padding: 20px;
-    margin: 20px;
-    -webkit-box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
-        box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
-    
+.productTopRight {
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
+  box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
 }
 
-.productInfoTop{
-    display: flex;
-    align-items: center;
+.productInfoTop {
+  display: flex;
+  align-items: center;
 }
 
-.productInfoImg{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
+.productInfoImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
 }
 
-.productInfoName{
-    font-weight: 600;
+.productInfoName {
+  font-weight: 600;
 }
 
-.productInfoBottom{
-    margin-top: 10px;
+.productInfoBottom {
+  margin-top: 10px;
 }
 
-.productInfoItem{
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.productInfoItem {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .productInfoValue {
-    font-weight: 300;
+  font-weight: 300;
 }
 
-.productInfoKey{
-    font-weight: 600;
-    margin-right: 10px;
+.productInfoKey {
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 .productBottom {
-    padding: 20px;
-    margin: 20px;
-    -webkit-box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
-    box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
-
+  padding: 20px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
+  box-shadow: 0px 0px 8px -1px rgba(0, 0, 0, 0.66);
 }
 
-.productForm{
-    display: flex;
-    justify-content: space-around;
+.productForm {
+  display: flex;
+  justify-content: space-around;
 }
 
-.productFormLeft{
+.productFormLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.productFormLeft > label {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.productFormLeft > input {
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+}
+
+.productFormLeft > select {
+  margin-bottom: 10px;
+}
+
+.productUploadImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.productFormRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.productUpload {
+  display: flex;
+  align-items: center;
+}
+
+.productFormRight .productUpload > label {
+  cursor: pointer;
+}
+
+.productButton {
+  border: none;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.productButton:disabled {
+  background-color: rgb(123, 123, 255);
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .product {
+    padding: 16px;
+  }
+
+  .productTopRight,
+  .productBottom {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .productUploadImg {
+    width: 90px;
+    height: 90px;
+  }
+
+  .productFormLeft > input {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .productFormLeft {
     display: flex;
     flex-direction: column;
-}
-
-.productFormLeft>label{
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.productFormLeft>input{
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 1px solid gray;
-    padding: 5px;
-}
-
-.productFormLeft>select{
-    margin-bottom: 10px;
-}
-
-.productUploadImg{
-
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    margin-right: 20px;
-    object-fit: cover;
-}
-
-.productFormRight{
+    gap: 15px;
+  }
+  .productFormRight {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: end;
     justify-content: space-around;
+  }
+
+  .productTop {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .productTopRight {
+    margin: 0;
+  }
+
+  .productBottom {
+    margin: 20px 0;
+  }
+
+  .productForm {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .productFormLeft > input,
+  .productFormLeft > select {
+    width: 100%;
+  }
+
+  .productUploadImg {
+    width: 80px;
+    height: 80px;
+  }
+
+  .productButton {
+    flex: 0.5;
+    height: fit-content;
+    padding: 10px;
+    font-size: 16px;
+  }
 }
 
-.productUpload{
-    display: flex;
-    align-items: center;
+@media (max-width: 480px) {
+  .product {
+    padding: 12px;
+  }
+
+  .productTitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .producctAddButton {
+    width: 100%;
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .productInfoImg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .productUploadImg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .productFormLeft > label {
+    font-size: 13px;
+  }
+
+  .productFormLeft > input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .productButton {
+    padding: 9px;
+    font-size: 15px;
+  }
 }
 
-.productFormRight .productUpload>label{
-    cursor: pointer;
-}
+@media (max-width: 380px) {
+  .product {
+    padding: 10px;
+  }
 
-.productButton{
-    border: none;
-    border-radius: 5px;
-    background-color: darkblue;
-    color: white;
-    padding: 5px;
-    font-weight: 600;
-    cursor: pointer;
-}
+  .productUploadImg {
+    width: 60px;
+    height: 60px;
+  }
 
-.productButton:disabled{
-    background-color: rgb(123, 123, 255);
-    cursor: not-allowed;
+  .productButton {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .productInfoImg {
+    width: 30px;
+    height: 30px;
+  }
 }

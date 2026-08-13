@@ -64,3 +64,91 @@
   font-weight: 600;
   margin-top: 10px;
 }
+
+@media (max-width: 1024px) {
+  .addProductItem {
+    width: 220px;
+  }
+
+  .addProductItemImg {
+    width: 200px;
+    height: 200px;
+  }
+
+  .addProductButton {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newProduct {
+    padding: 16px;
+  }
+
+  .addProductFormContainer {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .addProductItem {
+    width: 100%;
+  }
+
+  .addProductItem > input,
+  .addProductItem > select {
+    width: 100%;
+  }
+
+  .addProductItemImg {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+  }
+
+  .addProductButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .newProduct {
+    padding: 12px;
+  }
+
+  .addProductItem > label {
+    font-size: 13px;
+  }
+
+  .addProductItem > input {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .addProductItemImg {
+    width: 140px;
+    height: 140px;
+  }
+
+  .addProductButton {
+    padding: 9px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .newProduct {
+    padding: 10px;
+  }
+
+  .addProductItemImg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .addProductButton {
+    padding: 8px;
+    font-size: 14px;
+  }
+}

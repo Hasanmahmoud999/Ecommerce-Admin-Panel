@@ -1,59 +1,144 @@
-.newUser{
-    flex: 5;
-    padding: 20px;
+.newUser {
+  flex: 5;
+  padding: 20px;
 }
 
-.newUserForm{
-    display: flex;
-    flex-wrap: wrap;
+.newUserForm {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.newUserItem{
-    width: 500px;
-    display: flex;
+.newUserItem {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.newUserItem > label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(151, 150, 150);
+}
+
+.newUserItem > input {
+  height: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.newUserGender > input {
+  margin-top: 15px;
+}
+
+.newUserGender > label {
+  margin: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.newUserSelect {
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.newUserButton {
+  width: 200px;
+  border: none;
+  background-color: darkblue;
+  color: white;
+  padding: 7px 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+  .newUserItem {
+    width: 400px;
+    margin-right: 16px;
+  }
+
+  .newUserButton {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newUser {
+    padding: 16px;
+  }
+
+  .newUserForm {
     flex-direction: column;
-    margin-top: 10px;
-    margin-right: 20px;
-}
+    gap: 20px;
+  }
 
-.newUserItem>label{
-margin-bottom: 10px;
-font-size: 14px;
-font-weight: 600;
-color: rgb(151, 150, 150);
-}
+  .newUserItem {
+    width: 100%;
+    margin-right: 0;
+  }
 
-.newUserItem>input{
-    height: 20px;
+  .newUserItem > input,
+  .newUserSelect {
+    width: 100%;
+  }
+
+  .newUserButton {
+    width: 100%;
     padding: 10px;
-    border: 1px solid gray;
-    border-radius: 5px;
+    font-size: 16px;
+  }
 }
 
-.newUserGender>input{
-    margin-top: 15px;
+@media (max-width: 480px) {
+  .newUser {
+    padding: 12px;
+  }
+
+  .newUserItem > label {
+    font-size: 13px;
+  }
+
+  .newUserItem > input {
+    height: 18px;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .newUserSelect {
+    height: 36px;
+    padding: 8px;
+  }
+
+  .newUserGender > label {
+    font-size: 16px;
+  }
+
+  .newUserButton {
+    padding: 9px;
+    font-size: 15px;
+  }
 }
 
-.newUserGender>label{
-    margin: 10px;
-    font-size: 18px;
-    color: #555;
-}
-
-.newUserSelect{
-    height: 40px;
-    border-radius: 5px;
+@media (max-width: 380px) {
+  .newUser {
     padding: 10px;
-}
+  }
 
-.newUserButton{
-    width: 200px;
-    border: none;
-    background-color: darkblue;
-    color: white;
-    padding: 7px 10px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 30px;
-    border-radius: 10px;
+  .newUserItem > input {
+    height: 16px;
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .newUserButton {
+    padding: 8px;
+    font-size: 14px;
+  }
 }

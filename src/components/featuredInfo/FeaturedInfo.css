@@ -54,12 +54,12 @@
 @media (max-width: 768px) {
   .featured {
     flex-direction: column;
+    padding: 15px;
     align-items: stretch;
     gap: 20px;
   }
 
   .featredItem {
-    width: 100%;
     margin: 0;
     padding: 22px;
   }

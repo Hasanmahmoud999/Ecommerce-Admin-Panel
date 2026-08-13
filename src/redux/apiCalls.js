@@ -125,6 +125,7 @@ export const updateUser = async (id, updatedUser, dispatch, TOKEN) => {
     const res = await userRequest.put(`/users/${id}`, updatedUser, {
       headers: { token: `Bearer ${TOKEN}` },
     });
+    console.log(res.data);
     dispatch(updateUsersSuccess({ id, updatedUser }));
   } catch (err) {
     dispatch(updateUsersFailure());
